@@ -20,12 +20,12 @@ return {
 	},
 	keys = {
 		{
-			key = "c",
+			key = "Enter",
 			mods = "ALT",
 			action = wezterm.action.SplitHorizontal { domain = "CurrentPaneDomain" },
 		},
 		{
-			key = "c",
+			key = "Enter",
 			mods = "ALT|SHIFT",
 			action = wezterm.action.SplitVertical { domain = "CurrentPaneDomain" },
 		},
