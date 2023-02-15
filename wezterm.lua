@@ -34,5 +34,26 @@ return {
 			mods = 'ALT',
 			action = wezterm.action.SpawnTab('CurrentPaneDomain'),
 		},
+
+		{
+			key = 'LeftArrow',
+			mods = 'ALT',
+			action = wezterm.action.ActivatePaneDirection('Left'),
+		},
+		{
+			key = 'RightArrow',
+			mods = 'ALT',
+			action = wezterm.action.ActivatePaneDirection('Right'),
+		},
+		{
+			key = 'UpArrow',
+			mods = 'ALT',
+			action = wezterm.action.ActivatePaneDirection('Up'),
+		},
+		{
+			key = 'DownArrow',
+			mods = 'ALT',
+			action = wezterm.action.ActivatePaneDirection('Down'),
+		},
 	},
 }
