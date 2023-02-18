@@ -5,6 +5,14 @@ wezterm.on("gui-startup", function()
 	window:gui_window():maximize()
 end)
 
+-- Create shortcuts for ALT+n to switch tabs.
+switch_tab_keys = {}
+for key = 1, 9 do
+	switch_tab_keys[#switch_tab_keys + 1] = {
+		key = tostring(key), mods = "ALT", action = wezterm.action.ActivateTab(key - 1)
+	}
+end
+
 return {
 	harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
 	tab_bar_at_bottom = true,
@@ -29,30 +37,32 @@ return {
 			action = wezterm.action.SplitVertical { domain = "CurrentPaneDomain" },
 		},
 		{
-			key = 't',
-			mods = 'ALT',
-			action = wezterm.action.SpawnTab('CurrentPaneDomain'),
+			key = "t",
+			mods = "ALT",
+			action = wezterm.action.SpawnTab("CurrentPaneDomain"),
 		},
 
 		{
-			key = 'LeftArrow',
-			mods = 'ALT',
-			action = wezterm.action.ActivatePaneDirection('Left'),
+			key = "LeftArrow",
+			mods = "ALT",
+			action = wezterm.action.ActivatePaneDirection("Left"),
 		},
 		{
-			key = 'RightArrow',
-			mods = 'ALT',
-			action = wezterm.action.ActivatePaneDirection('Right'),
+			key = "RightArrow",
+			mods = "ALT",
+			action = wezterm.action.ActivatePaneDirection("Right"),
 		},
 		{
-			key = 'UpArrow',
-			mods = 'ALT',
-			action = wezterm.action.ActivatePaneDirection('Up'),
+			key = "UpArrow",
+			mods = "ALT",
+			action = wezterm.action.ActivatePaneDirection("Up"),
 		},
 		{
-			key = 'DownArrow',
-			mods = 'ALT',
-			action = wezterm.action.ActivatePaneDirection('Down'),
+			key = "DownArrow",
+			mods = "ALT",
+			action = wezterm.action.ActivatePaneDirection("Down"),
 		},
+
+		table.unpack(switch_tab_keys),
 	},
 }
