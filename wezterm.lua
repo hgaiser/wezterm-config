@@ -26,42 +26,15 @@ return {
 		bottom = 0,
 	},
 	keys = {
-		{
-			key = "Enter",
-			mods = "ALT",
-			action = wezterm.action.SplitHorizontal { domain = "CurrentPaneDomain" },
-		},
-		{
-			key = "Enter",
-			mods = "ALT|SHIFT",
-			action = wezterm.action.SplitVertical { domain = "CurrentPaneDomain" },
-		},
-		{
-			key = "t",
-			mods = "ALT",
-			action = wezterm.action.SpawnTab("CurrentPaneDomain"),
-		},
-
-		{
-			key = "LeftArrow",
-			mods = "ALT",
-			action = wezterm.action.ActivatePaneDirection("Left"),
-		},
-		{
-			key = "RightArrow",
-			mods = "ALT",
-			action = wezterm.action.ActivatePaneDirection("Right"),
-		},
-		{
-			key = "UpArrow",
-			mods = "ALT",
-			action = wezterm.action.ActivatePaneDirection("Up"),
-		},
-		{
-			key = "DownArrow",
-			mods = "ALT",
-			action = wezterm.action.ActivatePaneDirection("Down"),
-		},
+		{ key = "Enter",      mods = "ALT",       action = wezterm.action.SplitHorizontal { domain = "CurrentPaneDomain" }, },
+		{ key = "Enter",      mods = "ALT|SHIFT", action = wezterm.action.SplitVertical { domain = "CurrentPaneDomain" }, },
+		{ key = "c",          mods = "ALT",       action = wezterm.action.SplitHorizontal { domain = "CurrentPaneDomain" }, },
+		{ key = "c",          mods = "ALT|SHIFT", action = wezterm.action.SplitVertical { domain = "CurrentPaneDomain" }, },
+		{ key = "t",          mods = "ALT",       action = wezterm.action.SpawnTab("CurrentPaneDomain"), },
+		{ key = "LeftArrow",  mods = "ALT",       action = wezterm.action.ActivatePaneDirection("Left"), },
+		{ key = "RightArrow", mods = "ALT",       action = wezterm.action.ActivatePaneDirection("Right"), },
+		{ key = "UpArrow",    mods = "ALT",       action = wezterm.action.ActivatePaneDirection("Up"), },
+		{ key = "DownArrow",  mods = "ALT",       action = wezterm.action.ActivatePaneDirection("Down"), },
 
 		table.unpack(switch_tab_keys),
 	},
