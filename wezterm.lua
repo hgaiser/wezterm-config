@@ -38,4 +38,15 @@ return {
 
 		table.unpack(switch_tab_keys),
 	},
+	mouse_bindings = {
+		{ event = { Down = { streak = 1, button = 'Left' } },   mods = 'SHIFT', action = wezterm.action.SelectTextAtMouseCursor('Cell'), },
+		{ event = { Down = { streak = 1, button = 'Middle' } }, mods = 'NONE',  action = wezterm.action.PasteFrom('PrimarySelection'), },
+		{ event = { Down = { streak = 2, button = 'Left' } },   mods = 'SHIFT', action = wezterm.action.SelectTextAtMouseCursor('Word'), },
+		{ event = { Down = { streak = 3, button = 'Left' } },   mods = 'SHIFT', action = wezterm.action.SelectTextAtMouseCursor('Line'), },
+		{ event = { Drag = { streak = 1, button = 'Left' } },   mods = 'SHIFT', action = wezterm.action.ExtendSelectionToMouseCursor('Cell'), },
+		{ event = { Drag = { streak = 2, button = 'Left' } },   mods = 'SHIFT', action = wezterm.action.ExtendSelectionToMouseCursor('Word'), },
+		{ event = { Drag = { streak = 3, button = 'Left' } },   mods = 'SHIFT', action = wezterm.action.ExtendSelectionToMouseCursor('Line'), },
+		{ event = { Up   = { streak = 2, button = 'Left' } },   mods = 'SHIFT', action = wezterm.action.CompleteSelection('ClipboardAndPrimarySelection'), },
+		{ event = { Up   = { streak = 3, button = 'Left' } },   mods = 'SHIFT', action = wezterm.action.CompleteSelection('ClipboardAndPrimarySelection'), },
+	},
 }
