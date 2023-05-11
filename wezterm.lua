@@ -14,11 +14,13 @@ for key = 1, 9 do
 end
 
 return {
+	check_for_updates = false,
+	-- scroll_factor = 0.2,
 	harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
 	tab_bar_at_bottom = true,
 	hide_tab_bar_if_only_one_tab = true,
 	color_scheme = "Gruvbox dark, hard (base16)",
-	window_decorations = "RESIZE",
+	window_decorations = "NONE",
 	window_padding = {
 		left = 0,
 		right = 0,
