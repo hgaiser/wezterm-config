@@ -14,6 +14,8 @@ for key = 1, 9 do
 end
 
 return {
+	font = wezterm.font 'Roboto Mono',
+	warn_about_missing_glyphs = false,
 	check_for_updates = false,
 	-- scroll_factor = 0.2,
 	harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
